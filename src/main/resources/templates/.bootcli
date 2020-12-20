@@ -1,0 +1,8 @@
+{
+    "projectPackage": "{{projectPackage}}",
+    "path": "{{path}}",
+    "entityFolder": "{{entityFolder}}",
+    "repositoryFolder": "{{repositoryFolder}}",
+    "serviceFolder": "{{serviceFolder}}",
+    "controllerFolder": "{{controllerFolder}}"
+}
