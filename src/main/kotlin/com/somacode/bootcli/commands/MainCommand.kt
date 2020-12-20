@@ -1,7 +1,6 @@
 package com.somacode.bootcli.commands
 
 import picocli.CommandLine.Command
-import picocli.CommandLine.Option
 
 @Command(
         name = "boot",
@@ -12,12 +11,8 @@ import picocli.CommandLine.Option
 )
 class MainCommand : Runnable {
 
-    @Option(names = ["-h", "--hello"])
-    var hello: String? = null
-
-
     override fun run() {
-        println(hello)
+        println("boot")
     }
 
 }
