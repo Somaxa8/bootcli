@@ -20,13 +20,13 @@ class {{EntityName}}Service {
         }
     }
 
-    fun create() {
+    fun create(): {{EntityName}} {
         val {{entityName}} = {{EntityName}}()
 
         return {{entityName}}Repository.save({{entityName}})
     }
 
-    fun update() {
+    fun update(): {{EntityName}} {
             val {{entityName}} = {{EntityName}}()
 
             return {{entityName}}Repository.save({{entityName}})
