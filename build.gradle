@@ -1,0 +1,23 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+    id "org.jetbrains.kotlin.kapt" version "1.3.72"
+}
+
+jar {
+    baseName = 'app'
+    manifest { attributes 'Main-Class': 'com.somacode.bootcli.AppKt' }
+    from {configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'info.picocli:picocli:4.5.2'
+    kapt 'info.picocli:picocli-codegen:4.5.2'
+    implementation("commons-io:commons-io:2.8.0")
+    implementation("com.google.code.gson:gson:2.8.6")
+    implementation("com.google.guava:guava:29.0-jre")
+}
